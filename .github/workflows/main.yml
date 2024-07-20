@@ -1,5 +1,7 @@
 name: Check appointments availability
-on: [push, pull_request]
+on:
+    schedule:
+        - cron: "*/10 * * * *"
 jobs:
   scheduled:
     name: Checking appointments
@@ -12,7 +14,6 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: '8.3'
-          extensions: mbstring, intl
 
       - name: Run script
         run: php run.php
