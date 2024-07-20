@@ -34,9 +34,9 @@ foreach ($acceptableDates as $date) {
 		var_dump($date, $url, $responseCode, $responseError);
 		notify("ERROR", "Date: $date\n  URL: $url\n  Response code: $responseCode\n  " . var_export($responseError, true));
 	}
-	
-	notify("INFO", "Script fiished");
 }
+
+notify("INFO", "Script finished");
 
 function notify($subject, $body) {
 	var_dump($subject, $body);
