@@ -1,1 +1,18 @@
-#
+name: Check appointments availability
+on: [push, pull_request]
+jobs:
+  scheduled:
+    name: Checking appointments
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          extensions: mbstring, intl
+
+      - name: Run script
+        run: php run.php
