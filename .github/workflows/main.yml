@@ -2,6 +2,7 @@ name: Check appointments availability
 on:
     schedule:
         - cron: "*/10 * * * *"
+    workflow_dispatch:
 jobs:
   scheduled:
     name: Checking appointments
