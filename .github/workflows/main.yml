@@ -17,4 +17,8 @@ jobs:
           php-version: '8.3'
 
       - name: Run script
+        env:
+          SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
+          EMAIL_ADDRESS_TO: ${{ secrets.EMAIL_ADDRESS_TO }}
+          EMAIL_ADDRESS_FROM: ${{ secrets.EMAIL_ADDRESS_FROM }}
         run: php run.php
