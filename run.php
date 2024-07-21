@@ -27,7 +27,7 @@ foreach ($acceptableDates as $date) {
     if (empty($responseError) && 200 === $responseCode) {
         $data = json_decode($response);
         if (!empty($data)) {
-            notify("SUCCESS", "$date is available");
+            notify("SUCCESS", "$date is available\n Visit https://www.etermin.net/Rhein-Kreis-Neuss?servicegroupid=128874");
         }
     } else {
         notify("ERROR", "Date: $date\n  URL: $url\n  Response code: $responseCode\n  " . var_export($responseError, true));
