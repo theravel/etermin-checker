@@ -51,12 +51,12 @@ function notify($subject, $body) {
         'personalizations' => [
             [
                 'to' => [
-                    ['email' => getenv('EMAIL_ADDRESS')],
+                    ['email' => getenv('EMAIL_ADDRESS_TO')],
                 ],
             ],
         ],
         'from' => [
-            'email' => 'notifications@orglio.com',
+            'email' => getenv('EMAIL_ADDRESS_FROM'),
         ],
         'subject' => $subject,
         'content' => [
