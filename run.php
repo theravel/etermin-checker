@@ -59,7 +59,7 @@ function notify($subject, $body) {
         'personalizations' => [
             [
                 'to' => [
-                    ['email' => getenv('EMAIL_ADDRESS_TO')],
+                    ['email' => json_decode(getenv('EMAIL_ADDRESS_TO'))],
                 ],
             ],
         ],
