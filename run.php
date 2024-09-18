@@ -58,9 +58,7 @@ function notify($subject, $body) {
     $postData = json_encode([
         'personalizations' => [
             [
-                'to' => [
-                    ['email' => json_decode(getenv('EMAIL_ADDRESS_TO'))],
-                ],
+                'to' => json_decode(getenv('EMAIL_ADDRESS_TO')),
             ],
         ],
         'from' => [
