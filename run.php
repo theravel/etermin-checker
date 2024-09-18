@@ -43,7 +43,7 @@ foreach ($acceptableDates as $date) {
 }
 
 
-notify("INFO", "Script finished");
+//notify("INFO", "Script finished");
 
 function notify($subject, $body) {
     $curl = curl_init('https://api.sendgrid.com/v3/mail/send');
